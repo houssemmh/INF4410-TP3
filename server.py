@@ -20,7 +20,7 @@ class MyServer(BaseHTTPServer.BaseHTTPRequestHandler):
       query_params['nom'] = 'Inconnu'
     nom = query_params['nom']
 
-    time.sleep(0.75)
+    time.sleep(0.5)
 
     self.send_response(200)
     self.send_header('Content-type','text/html')
@@ -29,7 +29,7 @@ class MyServer(BaseHTTPServer.BaseHTTPRequestHandler):
     return
 
 server = BaseHTTPServer.HTTPServer
-server_address = ('', 8000)
+server_address = ('', 8080)
 
 MyServer.protocol_version = 'HTTP/1.0'
 httpd = server(server_address, MyServer)
