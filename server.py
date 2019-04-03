@@ -1,5 +1,5 @@
 import sys
-import BaseHTTPServer
+import http.server.HTTPServer
 import SimpleHTTPServer
 import socket
 import time
@@ -35,5 +35,5 @@ MyServer.protocol_version = 'HTTP/1.0'
 httpd = server(server_address, MyServer)
 
 sa = httpd.socket.getsockname()
-print 'Serveur actif a ', sa[0], 'port', sa[1]
+print ('Serveur actif a ' + sa[0] + ' port ' + str(sa[1]))
 httpd.serve_forever()
