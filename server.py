@@ -1,5 +1,5 @@
 import sys
-import BaseHTTPServer
+import http.server.HTTPServer
 import SimpleHTTPServer
 import socket
 import time
