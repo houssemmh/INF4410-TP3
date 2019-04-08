@@ -29,7 +29,7 @@ class MyServer(BaseHTTPServer.BaseHTTPRequestHandler):
     return
 
 server = BaseHTTPServer.HTTPServer
-server_address = ('', 8080)
+server_address = ('', 8000)
 
 MyServer.protocol_version = 'HTTP/1.0'
 httpd = server(server_address, MyServer)
